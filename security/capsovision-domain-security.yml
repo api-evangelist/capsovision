@@ -1,0 +1,27 @@
+generated: '2026-08-09'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: capsovision.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 13 07:56:36 2026 GMT
+  hsts: false
+- host: www.capsocloud.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 24 23:59:59 2026 GMT
+  hsts: false
+domains:
+- domain: capsovision.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: capsocloud.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: true
+  dmarc_policy: reject
