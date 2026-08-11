@@ -1,0 +1,18 @@
+generated: '2026-08-10'
+method: searched
+source: https://capsovision.com/
+applicable: false
+plan_count: 0
+note: >-
+  CapsoVision publishes no API plans or API pricing because it publishes no API.
+  CapsoCam Plus is a prescription single-use medical device sold through a direct
+  sales force and distribution partners, and CapsoCloud is the account-gated clinical
+  application bundled with it; neither has a self-serve tier, a public price list, nor
+  a machine-readable pricing endpoint. The CapsoCloud application does carry internal
+  reading-credit accounting (the AngularJS bundle at www.capsocloud.com ships
+  app/admin/accounting/*.js controllers for reading credits and shared credits), but
+  that commercial model is visible only to authenticated administrators and is never
+  published. plan_count: 0 here is an honest zero, recorded so a later run does not
+  re-search: it is NOT "an API with undocumented pricing". No Plans pointer is wired
+  into apis.yml, because a file documenting an absence must not be scored as a presence.
+plans: []

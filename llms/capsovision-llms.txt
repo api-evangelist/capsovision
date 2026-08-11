@@ -22,16 +22,25 @@ sources — it is not a CapsoVision publication.
 ## APIs
 
 None published. No OpenAPI, AsyncAPI, GraphQL SDL, MCP server, agent card, or Postman
-collection was found on any CapsoVision or CapsoCloud host.
+collection was found on any CapsoVision or CapsoCloud host. Re-probed 2026-08-10 across
+`capsovision.com`, `www.capsocloud.com` and `investors.capsovision.com`; `api.`,
+`developer.`, `docs.` and `portal.` subdomains do not resolve at all. Every
+`/.well-known/*`, `/openapi.json`, `/swagger.json`, `/graphql` and `/llms.txt` path on
+`www.capsocloud.com` returns the same 13,322-byte AngularJS shell — a soft-404, not a
+document. Treat a 200 from that host as no evidence.
 
 ## Packages
 
-- [@capsovision/capso_utils](https://www.npmjs.com/package/@capsovision/capso_utils): first-party internal utility library (npm)
-- [@capsovision/capso_components_mobile](https://www.npmjs.com/package/@capsovision/capso_components_mobile): first-party shared React Native components for the CapsoCloud mobile app (npm)
+- [@capsovision/capso_utils](https://www.npmjs.com/package/@capsovision/capso_utils): first-party internal utility library (npm) — v1.1.32, published 2026-04-03
+- [@capsovision/capso_components_mobile](https://www.npmjs.com/package/@capsovision/capso_components_mobile): first-party shared React Native components for the CapsoCloud mobile app (npm) — v1.3.1, published 2026-04-28
+
+Both npm packages name `github.com/CapsoVision/…` repositories that return 404 — the
+GitHub organization has zero public repositories.
 
 ## Company
 
-- [Website](https://capsovision.com/)
+- [Website](https://capsovision.com/) (behind a SiteGround captcha challenge — answers HTTP 202 to automated clients)
+- [News](https://capsovision.com/news/)
 - [About](https://capsovision.com/about/)
 - [Careers](https://capsovision.com/about/careers/)
 - [Contact](https://capsovision.com/contact/)
@@ -41,5 +50,8 @@ collection was found on any CapsoVision or CapsoCloud host.
 
 ## API Evangelist artifacts
 
-- [packages/capsovision-packages.yml](packages/capsovision-packages.yml): first-party package inventory
+- [packages/capsovision-packages.yml](packages/capsovision-packages.yml): first-party package inventory with published versions and dates
 - [security/capsovision-domain-security.yml](security/capsovision-domain-security.yml): probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture
+- [well-known/capsovision-well-known.yml](well-known/capsovision-well-known.yml): probed `/.well-known/` surface — a recorded absence, with the soft-404 and captcha shapes named
+- [plans/capsovision-plans-pricing.yml](plans/capsovision-plans-pricing.yml): no API plans published (`plan_count: 0`)
+- [rate-limits/capsovision-rate-limits.yml](rate-limits/capsovision-rate-limits.yml): no API rate limits published (`limit_count: 0`)

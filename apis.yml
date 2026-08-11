@@ -16,7 +16,7 @@ x-type: company
 x-source: harvest:secondary-market
 specificationVersion: '0.20'
 created: '2026-08-09'
-modified: '2026-08-09'
+modified: '2026-08-10'
 tags:
 - Company
 - Medical Devices
@@ -43,6 +43,8 @@ common:
   url: https://capsovision.com/contact/
 - type: GitHubOrganization
   url: https://github.com/CapsoVision
+- type: Blog
+  url: https://capsovision.com/news/
 - type: Packages
   url: packages/capsovision-packages.yml
 - type: LLMsTxt
@@ -50,7 +52,7 @@ common:
 - type: DomainSecurity
   url: security/capsovision-domain-security.yml
 x-enrichment:
-  date: '2026-08-09'
+  date: '2026-08-10'
   status: minimal
   artifacts_added: 3
   pass: local-v1
@@ -58,10 +60,12 @@ x-coverage:
   state: none
   reason: no-developer-program
   detail: CapsoVision ships clinical software (CapsoCloud/CapsoView) but no developer
-    program of any kind - its GitHub org has zero public repositories, and the CapsoCloud
-    app's own JSON backend at www.capsocloud.com/api/ answers "Resource Not Found"
-    to every unauthenticated path while every other path returns the same 13,322-byte
-    AngularJS shell, so there is no public API, spec, or reference to read.
+    program of any kind - the api., developer., docs. and portal. subdomains do not
+    resolve at all, its GitHub org returns an empty repository array, and the CapsoCloud
+    app's own JSON backend at www.capsocloud.com/api/ answers "Resource Not Found" to
+    every unauthenticated path while every other path (including every /.well-known/*)
+    returns the same 13,322-byte AngularJS shell, so a 200 from that host is a soft-404
+    and there is no public API, spec, or reference to read.
   evidence:
   - url: https://www.capsocloud.com/openapi.json
     status: 200
@@ -69,8 +73,12 @@ x-coverage:
     status: 404
   - url: https://www.capsocloud.com/.well-known/agent-card.json
     status: 200
+  - url: https://www.capsocloud.com/graphql
+    status: 200
   - url: https://api.github.com/orgs/CapsoVision/repos
     status: 200
-  - url: https://capsovision.com/
+  - url: https://capsovision.com/robots.txt
     status: 202
-  checked: '2026-08-09'
+  - url: https://investors.capsovision.com/
+    status: 403
+  checked: '2026-08-10'

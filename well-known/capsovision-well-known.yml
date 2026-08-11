@@ -1,0 +1,79 @@
+generated: '2026-08-10'
+method: probed
+source: live GET of the RFC 8615 /.well-known/ surface on every CapsoVision host
+result: none
+pointer_emitted: false
+note: >-
+  Nothing was found. This file records an ABSENCE, not a presence, so no WellKnown or
+  SecurityTxt pointer is wired into apis.yml. Two distinct failure shapes were observed
+  and both are recorded below rather than collapsed into "404".
+  (1) www.capsocloud.com is an AngularJS single-page application with an HTML5-mode
+  catch-all: every unmatched path — including every /.well-known/* path — returns
+  HTTP 200 with the same 13,322-byte application shell beginning "<!doctype html>".
+  That is a soft-404, NOT a served document; a 200 here is not evidence of anything.
+  The only paths that escape the catch-all are those routed to the app's private JSON
+  backend under /api/, which answers {"status":"error","statusCode":404,"message":
+  "Resource Not Found"} to unauthenticated callers.
+  (2) capsovision.com sits behind a SiteGround bot challenge: every path, including
+  /robots.txt and /.well-known/security.txt, returns HTTP 202 with a 169-198 byte
+  meta-refresh to /.well-known/sgcaptcha/ and an "sg-captcha: challenge" header.
+  Nothing on that host could be read by an automated client this round.
+hosts:
+- host: www.capsocloud.com
+  base: https://www.capsocloud.com
+  behavior: spa-catch-all
+  shell_bytes: 13322
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    served: false
+    reason: html-spa-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    served: false
+    reason: html-spa-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    served: false
+    reason: html-spa-shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    served: false
+    reason: html-spa-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    served: false
+    reason: html-spa-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    served: false
+    reason: html-spa-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    served: false
+    reason: html-spa-shell
+  - path: /.well-known/agent.json
+    status: 200
+    served: false
+    reason: html-spa-shell
+- host: capsovision.com
+  base: https://capsovision.com
+  behavior: bot-challenge
+  challenge: sg-captcha
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    served: false
+    reason: siteground-captcha-challenge
+  - path: /.well-known/agent-card.json
+    status: 202
+    served: false
+    reason: siteground-captcha-challenge
+- host: investors.capsovision.com
+  base: https://investors.capsovision.com
+  behavior: edge-block
+  documents:
+  - path: /
+    status: 403
+    served: false
+    reason: akamai-403-to-automated-clients

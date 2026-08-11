@@ -1,0 +1,17 @@
+generated: '2026-08-10'
+method: probed
+source: https://www.capsocloud.com/api/
+applicable: false
+limit_count: 0
+note: >-
+  CapsoVision documents no rate limits because it documents no API. There is no
+  developer portal, no API reference and no public endpoint on which limits could be
+  published. The only live JSON surface is the CapsoCloud application's own private
+  backend under www.capsocloud.com/api/, which returns
+  {"status":"error","statusCode":404,"message":"Resource Not Found"} to every
+  unauthenticated path and emits no X-RateLimit-*, RateLimit-* or Retry-After headers
+  on those responses. limit_count: 0 is an honest zero recorded from a real probe so a
+  later run does not re-search; no RateLimits pointer is wired into apis.yml, because a
+  file documenting an absence must not be scored as a presence.
+observed_headers: []
+limits: []
