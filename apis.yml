@@ -10,6 +10,17 @@ description: 'CapsoVision, Inc. (Nasdaq: CV) is a commercial-stage medical techn
   development. CapsoVision publishes no public developer program, API reference, or
   machine-readable specification; CapsoCloud is an end-user clinical web and mobile
   application whose JSON backend is private to the product.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://mma.prnewswire.com/media/2593739/CapsoVision_Logo_horizontal_with_tagline_Logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/capsovision/refs/heads/main/apis.yml
 x-type: company
