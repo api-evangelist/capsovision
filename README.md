@@ -64,5 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CapsoVision is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+CapsoVision, Inc. (Nasdaq: CV) is a commercial-stage medical technology company headquartered in Saratoga, California that develops advanced imaging and artificial-intelligence technologies for gastrointestinal disease detection and screening. Its CapsoCam Plus single-use capsule endoscope captures a 360-degree panoramic view of the small-bowel mucosa without external receiver equipment, and is paired with CapsoCloud, an account-gated cloud application, and CapsoView review software for physician image review and reporting. A next-generation CapsoCam Colon system is in development. CapsoVision publishes no public developer program, API reference, or machine-readable specification; CapsoCloud is an end-user clinical web and mobile application whose JSON backend is private to the product.
+
+**Areas:** Company · Medical Devices · Healthcare · Capsule Endoscopy · Gastroenterology · Medical Imaging · Artificial Intelligence · Cloud Software
+
+## CapsoVision on APIs.io
+
+Everything profiled for CapsoVision is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/capsovision/](https://apis.io/providers/capsovision/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Capsovision Domain Security](https://apis.io/security/capsovision/capsovision-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Capsovision Plans Pricing](https://apis.io/plans/capsovision/capsovision-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Capsovision Rate Limits](https://apis.io/rate-limits/capsovision/capsovision-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://capsovision.com/)
+- [Support](https://capsovision.com/contact/)
+- [Blog](https://capsovision.com/news/)
+- [Privacy policy](https://capsovision.com/privacy-policy/)
+- [GitHub](https://github.com/CapsoVision)
+
+## API Evangelist rating
+
+**Kin Score 5.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 6.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/capsovision/](https://apis.io/providers/capsovision/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CapsoVision: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/capsovision/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
